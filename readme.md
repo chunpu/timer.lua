@@ -28,8 +28,10 @@ Api
 - `timer.setInterval(timerName, handler, interval[, arguments...])` return ok, err
 - `timer.clearInterval(timerName)`
 
+The reason why we need to define a timer name rather use an auto increment int is that we can't tell if nginx is reload or restart
+
 
 Advanced
 ---
 
-Interval only supports integer multiple of `timer.interval`, default is 0.5. if you want to run interval by 0.1, then you should set `timer.interval` to smaller than 0.1
+Interval only supports integer multiple of `timer.interval`, default is `0.5`. if you want to run interval by 0.1, then you should set `timer.interval` to smaller than 0.1
