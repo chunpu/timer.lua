@@ -76,9 +76,9 @@ function timer.setInterval(name, handler, interval, ...)
 			arguments = {...}
 		}
 		return true
-	else
-		return false, 'count is not a int, change interval or timer.interval'
 	end
+
+	return false, 'interval is not valid, change interval or timer.interval'
 end
 
 function timer.clearInterval(name)
